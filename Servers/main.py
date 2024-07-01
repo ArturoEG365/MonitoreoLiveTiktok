@@ -5,16 +5,51 @@ from tkinter import *
 import random
 
 responses = [
-    "Sí.", 
-    "No.", 
-    "Tal vez algún día...", 
+    "Sí.",
+    "No.",
+    "Tal vez algún día...",
     "No cuentes con ello.",
-    "Definitivamente sí.", 
-    "Pregunta de nuevo más tarde.", 
+    "Definitivamente sí.",
+    "Pregunta de nuevo más tarde.",
     "No lo creo.",
-    "Es posible.", 
-    "Claro que sí.", 
-    "Sin lugar a dudas."
+    "Es posible.",
+    "Claro que sí.",
+    "Sin lugar a dudas.",
+    "Probablemente.",
+    "No estoy seguro.",
+    "Eso es un misterio.",
+    "Cuenta con ello.",
+    "Las estrellas dicen que sí.",
+    "Por supuesto.",
+    "No puedo decirlo ahora.",
+    "Lo dudo mucho.",
+    "Sí, pero no ahora.",
+    "Mis fuentes dicen que no.",
+    "Es una buena pregunta.",
+    "El tiempo lo dirá.",
+    "Sí, pero necesitarás paciencia.",
+    "Mejor no te lo digo ahora.",
+    "Sin duda alguna.",
+    "No lo veo claro.",
+    "Parece prometedor.",
+    "No hay dudas al respecto.",
+    "Podría ser.",
+    "Ciertamente.",
+    "Solo si llevas calcetines a juego.",
+    "No hasta que los cerdos vuelen.",
+    "Es más probable que te caiga un rayo.",
+    "¡Claro! Y también me compraré una isla.",
+    "Pregúntale a tu gato.",
+    "Solo si puedes bailar el hula hoop.",
+    "No, pero podrías intentarlo.",
+    "Sí, y el cielo es verde.",
+    "Eso depende de qué lado de la cama te levantes.",
+    "¡Sí! En un universo paralelo.",
+    "Solo si haces una reverencia primero.",
+    "Mis antenas dicen que sí.",
+    "Solo si puedes tocarte la nariz con la lengua.",
+    "Solo si prometes ser bueno.",
+    "Sí, pero solo los martes."
 ]
 
 
@@ -45,7 +80,6 @@ async def on_comment(event: CommentEvent) -> None:
         print(f"{event.user.nickname} -> {comment}")
 
 client.add_listener(CommentEvent, on_comment)
-
 
 # Event to SubscribeEvent
 @client.on(SubscribeEvent)
