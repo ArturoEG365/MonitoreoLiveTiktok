@@ -22,7 +22,7 @@ responses = [
 init()
 
 # Create the client
-client: TikTokLiveClient = TikTokLiveClient(unique_id="@fandelospayasosdefede")
+client: TikTokLiveClient = TikTokLiveClient(unique_id="@rameroelizalde")
 
 # Listen to an event with a decorator!
 @client.on(ConnectEvent)
@@ -45,12 +45,6 @@ async def on_comment(event: CommentEvent) -> None:
         print(f"{event.user.nickname} -> {comment}")
 
 client.add_listener(CommentEvent, on_comment)
-
-
-# Event to liked
-@client.on(LikeEvent)
-async def on_like(event: LikeEvent) -> None:
-    print(f"{event.user.nickname} liked the stream!")
 
 
 # Event to SubscribeEvent
