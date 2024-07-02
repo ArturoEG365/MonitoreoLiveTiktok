@@ -57,7 +57,7 @@ responses = [
 init()
 
 # Create the client
-client: TikTokLiveClient = TikTokLiveClient(unique_id="@rameroelizalde")
+client: TikTokLiveClient = TikTokLiveClient(unique_id="@isabella.elaaa")
 
 # Listen to an event with a decorator!
 @client.on(ConnectEvent)
