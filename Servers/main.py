@@ -1,5 +1,5 @@
 from TikTokLive import TikTokLiveClient
-from TikTokLive.events import ConnectEvent, CommentEvent, LikeEvent, SubscribeEvent
+from TikTokLive.events import ConnectEvent, CommentEvent, LikeEvent, SubscribeEvent, EmoteChatEvent
 from colorama import Fore, Style, init
 from tkinter import *
 import random
@@ -87,6 +87,21 @@ async def on_follow(event: SubscribeEvent) -> None:
     print("-----------------------------------------")
     print(Fore.GREEN + f"{event.user.nickname} followed you")
     print("-----------------------------------------")
+
+# EmoteChatEvent send emote
+
+@client.on(EmoteChatEvent)
+async def on_follow(event: EmoteChatEvent) -> None:
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+    print(Fore.YELLOW + f"{event.user.nickname} 🥰 ENVIO UN REGALO 🥰"+ Style.RESET_ALL)
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+    print(Fore.YELLOW +"-----------------------------------------"+ Style.RESET_ALL)
+
+
+
 
 if __name__ == '__main__':
     client.run()
